@@ -410,70 +410,96 @@
       opacity: 0.8;
     }
 
-    /* Contact Section */
-    .contact-container {
-      display: flex;
-      gap: 50px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+/* Contact Section */
+.contact-container {
+  display: flex;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
 
-    .contact-info {
-      flex: 1;
-    }
+.contact-info {
+  flex: 1;
+  padding-right: 20px;
+}
 
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      margin-bottom: 20px;
-    }
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
 
-    .contact-icon {
-      width: 50px;
-      height: 50px;
-      background-color: var(--accent-color);
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-    }
+.contact-icon {
+  width: 45px;
+  height: 45px;
+  background-color: var(--accent-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
 
-    .contact-form {
-      flex: 1;
-      background-color: var(--secondary-color);
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: var(--shadow);
-    }
+.contact-form.compact {
+  flex: 1;
+  background-color: var(--secondary-color);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  max-width: 400px;
+}
 
-    .form-group {
-      margin-bottom: 20px;
-    }
+.contact-form.compact h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: var(--accent-color);
+}
 
-    .form-group label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 500;
-    }
+.contact-form.compact .form-group {
+  margin-bottom: 15px;
+}
 
-    .form-group input,
-    .form-group textarea {
-      width: 100%;
-      padding: 12px;
-      border: none;
-      border-radius: 5px;
-      background-color: var(--primary-color);
-      color: var(--text-color);
-      font-family: 'Poppins', sans-serif;
-    }
+.contact-form.compact input,
+.contact-form.compact textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 6px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
 
-    .form-group textarea {
-      height: 150px;
-      resize: vertical;
-    }
+.contact-form.compact textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.contact-form.compact .btn {
+  width: 100%;
+  padding: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .contact-form.compact {
+    max-width: 100%;
+  }
+  
+  .contact-info {
+    padding-right: 0;
+  }
+}
 
     /* Footer */
     footer {
@@ -748,7 +774,7 @@
         <a href="#contact" class="btn btn-secondary">Contact Me</a>
       </div>
     </div>
-    <img src="C:\Website\2.jpg" alt="Sambhav Siwakoti" class="hero-image">
+    <img src="file:///C:/Website/images/1.jpg" alt="Sambhav Siwakoti" class="hero-image">
   </section>
 
   <!-- About Section -->
@@ -774,10 +800,11 @@
           <div class="skill">Oracle</div>
           <div class="skill">MySQL</div>
           <div class="skill">Python</div>
+          <div class="skill">Pytorch</div>
           <div class="skill">Git</div>
         </div>
       </div>
-      <img src="file:///C:/Website/1.jpg" alt="Sambhav Siwakoti" class="about-image">
+      <img src="file:///C:/Website/images/2.jpg" alt="Sambhav Siwakoti" class="about-image">
     </div>
   </section>
 
@@ -809,7 +836,7 @@
       </div>
       
       <div class="project">
-        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Task Management App" class="project-image">
+        <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Weather Dashboard" class="project-image" alt="HVAC-image">
         <div class="project-content">
           <h3>HVAC System</h3>
           <p>A productivity application for organizing tasks with drag-and-drop functionality and team collaboration.</p>
@@ -830,7 +857,7 @@
       </div>
       
       <div class="project">
-        <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Weather Dashboard" class="project-image">
+        <img src="C:\Website\images\dog.jpg" alt="Dog" class="project-image">
         <div class="project-content">
           <h3>Dog Breed Identification</h3>
           <p>Real-time weather application with 5-day forecast, location detection, and interactive maps.</p>
@@ -945,75 +972,68 @@
 </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="animate">
-    <div class="section-title">
-      <h2>Get In Touch</h2>
-    </div>
-    <div class="contact-container">
-      <div class="contact-info">
-        <h3>Contact Information</h3>
-        <p>Feel free to reach out to me for any questions or opportunities!</p>
-        
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i class="fas fa-map-marker-alt"></i>
-          </div>
-          <div>
-            <h4>Location</h4>
-            <p>Vermillion, South Dakota</p>
-          </div>
+  <!-- Contact Section -->
+<section id="contact" class="animate">
+  <div class="section-title">
+    <h2>Get In Touch</h2>
+    <p class="section-subtitle">Feel free to reach out for collaborations or just to say hello!</p>
+  </div>
+  
+  <div class="contact-container">
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <div class="contact-item">
+        <div class="contact-icon">
+          <i class="fas fa-envelope"></i>
         </div>
-        
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i class="fas fa-envelope"></i>
-          </div>
-          <div>
-            <h4>Email</h4>
-            <p>sambhav.siwakoti@Coyotes.usd.edu</p>
-          </div>
-        </div>
-        
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i class="fas fa-phone"></i>
-          </div>
-          <div>
-            <h4>Phone</h4>
-            <p>+16057404310</p>
-          </div>
+        <div>
+          <h4>Email</h4>
+          <p>sambhav@example.com</p>
         </div>
       </div>
       
-      <div class="contact-form">
-        <h3>Send Me a Message</h3>
-        <form>
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="email">Your Email</label>
-            <input type="email" id="email" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" required></textarea>
-          </div>
-          
-          <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
-        </form>
+      <div class="contact-item">
+        <div class="contact-icon">
+          <i class="fas fa-phone"></i>
+        </div>
+        <div>
+          <h4>Phone</h4>
+          <p>+977 9841234567</p>
+        </div>
+      </div>
+      
+      <div class="contact-item">
+        <div class="contact-icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <div>
+          <h4>Location</h4>
+          <p>Kathmandu, Nepal</p>
+        </div>
       </div>
     </div>
-  </section>
-
+    
+    <!-- Compact Form -->
+    <div class="contact-form compact">
+      <h3>Send a Quick Message</h3>
+      <form>
+        <div class="form-group">
+          <input type="text" id="name" placeholder="Your Name" required>
+        </div>
+        
+        <div class="form-group">
+          <input type="email" id="email" placeholder="Your Email" required>
+        </div>
+        
+        <div class="form-group">
+          <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
 
  <!--Footer -->
 
